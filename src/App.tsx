@@ -5,6 +5,7 @@ import { useKeyboardShortcuts } from "./hooks/useKeyboardShortcuts";
 import { useAutoHidePanel } from "./hooks/useAutoHidePanel";
 import { LightLayer } from "./components/LightLayer";
 import { ControlPanel } from "./components/ControlPanel";
+import { Analytics } from "@vercel/analytics/react";
 
 function App() {
   const { toggleFullscreen } = useFullscreen();
@@ -15,6 +16,7 @@ function App() {
     <div className="relative h-full min-h-screen bg-black overflow-hidden">
       <LightLayer />
       <ControlPanel toggleFullscreen={toggleFullscreen} />
+      <Analytics />
     </div>
   );
 }
